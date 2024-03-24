@@ -1,0 +1,111 @@
+$primary-color: #2663c5;
+$secondary-color: #4c5a72;
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.header,
+.footer {
+    background-color: #80a4df;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: calc(100vh - 80px);
+}
+
+.calculator_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    max-width: 700px;
+    min-height: 300px;
+
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.input_section {
+    width: calc(50% - 40px);
+    padding: 20px;
+    background-color: #fffdfd;
+
+    label,
+    .loan_amount_slider {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input {
+        width: 50%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #{$primary-color};
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+
+        &:disabled {
+            background-color: #{$secondary-color};
+            cursor: not-allowed;
+        }
+    }
+
+    .error_message {
+        padding-top: 20px;
+        color: red;
+    }
+}
+.results_section {
+    width: calc(50% - 40px);
+    padding: 20px;
+    background-color: #223f6d;
+    color: white;
+    min-height: 100%;
+
+
+    div {
+        border-top: 1px solid #{$secondary-color};
+        padding-top: 20px;
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        height: 100%;
+    }
+
+    .input_section,
+    .results_section {
+        width: 100%;
+    }
+}

@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.header,
+.footer {
+  background-color: #80a4df;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  height: calc(100vh - 80px);
+}
+
+.calculator_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  max-width: 700px;
+  min-height: 300px;
+}
+.calculator_wrapper h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.input_section {
+  width: calc(50% - 40px);
+  padding: 20px;
+  background-color: #fffdfd;
+}
+.input_section label,
+.input_section .loan_amount_slider {
+  display: block;
+  margin-bottom: 10px;
+}
+.input_section input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.input_section button {
+  background-color: #2663c5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.input_section button:disabled {
+  background-color: #4c5a72;
+  cursor: not-allowed;
+}
+.input_section .error_message {
+  padding-top: 20px;
+  color: red;
+}
+
+.results_section {
+  width: calc(50% - 40px);
+  padding: 20px;
+  background-color: #223f6d;
+  color: white;
+  min-height: 100%;
+}
+.results_section div {
+  border-top: 1px solid #4c5a72;
+  padding-top: 20px;
+}
+.results_section div p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    height: 100%;
+  }
+  .input_section,
+.results_section {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

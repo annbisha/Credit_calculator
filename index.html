@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Кредитний калькулятор</title>
+</head>
+<body>
+    <header class="header">
+
+    </header>
+    <div class="wrapper">
+        <div class="calculator_wrapper">
+            <div class="input_section">
+                <h1>Кредитний калькулятор</h1>
+                <form class="calculator_form">
+                    <div class="amount_wrapper">
+                        <label for="loan-amount">Сума кредиту (грн):</label>
+                        <input type="number" class="loan_amount" required min="1000" max="50000" step="100">
+                        <input type="range" class="loan_amount_slider" name="loan_amount_slider" min="1000" max="50000" step="100" value="1000"/>
+                    </div>
+                    <div class="period_wrapper">
+                        <label for="loan-period">Період погашення (днів):</label>
+                        <input type="number" class="loan_period" required min="7" max="60" step="1">
+                        <input type="range" class="loan_period_slider" name="loan_period_slider" min="7" max="60" step="1" value="7"/>
+                    </div>
+                    <button type="submit" class="calculate_button" disabled>Отримати кредит</button>
+                    <p class="error_message"></p>
+                </form>
+            </div>
+            <div class="results_section">
+                <h1>Результати</h1>
+                <div>
+                    <p>Денна сума погашення:</p>
+                    <p class="daily-payment">0 грн</p>
+                </div>
+                <div>
+                    <p>Загальна сума погашення:</p>
+                    <p class="total_payment">0 грн</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>
